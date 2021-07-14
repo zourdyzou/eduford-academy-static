@@ -1,0 +1,250 @@
+:root {
+  --main-color: #f44336;
+  --color-white: #fff;
+  --hover-transition-hero: all 0.2s ease-in-out;
+  --general-font-family: "Poppins", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* 
+===========
+***********
+HEADER SECTION
+***********
+===========
+*/
+
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url("../images//banner.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.navigation__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 7rem;
+}
+
+.navigation__container > .navigation__link > .navigation__logo {
+  width: 150px;
+}
+
+.navigation__links {
+  flex: 1;
+  text-align: right;
+}
+
+.navigation__links > ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  gap: 2.8rem;
+}
+
+.navigation__links > ul > .navigation__list {
+  position: relative;
+}
+
+.navigation__links > ul > .navigation__list::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: var(--main-color);
+  display: block;
+  margin: auto;
+
+  transition: var(--hover-transition-hero);
+}
+
+.navigation__links > ul > .navigation__list:hover::after {
+  width: 100%;
+}
+
+.navigation__links--item {
+  color: var(--color-white);
+  font-size: 1.5rem;
+  font-family: var(--general-font-family);
+  font-weight: 400;
+}
+
+.text-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 70vh;
+
+  gap: 2rem;
+  color: var(--color-white);
+}
+
+.text-box > h1 {
+  font-size: 3.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.text-box > p {
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+  margin: 10px 2rem;
+  width: 40%;
+  text-align: center;
+
+  font-family: "Poppins", sans-serif;
+}
+
+.button__hero {
+  color: white;
+  display: inline-block;
+  border: 1px solid var(--color-white);
+  cursor: pointer;
+  padding: 12px 34px;
+  font-size: 16px;
+  position: relative;
+  background: transparent;
+}
+
+.button__hero:hover {
+  border: 1px solid var(--main-color);
+  background: var(--main-color);
+  transition: var(--hover-transition-hero);
+}
+
+.navigation__mobile--menu {
+  font-size: 4rem;
+  padding-left: 12rem;
+  color: var(--color-white);
+}
+
+/* MOBILE VIEWPORT */
+.hidden {
+  visibility: hidden !important;
+}
+
+.navigation__mobile {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--main-color);
+  z-index: 10;
+  width: 50%;
+  padding: 3rem;
+  transition: all 0.2s;
+
+  /* CHANGE THIS IN JAVASCRIPT */
+  visibility: visible;
+}
+
+.navigation__mobile > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 3rem;
+}
+
+.navigation__mobile > .close__button {
+  color: var(--color-white);
+  position: fixed;
+  top: 2rem;
+  right: 2.2rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.navigation__links--mobile {
+  font-size: 1.5rem;
+  color: var(--color-white);
+  font-family: var(--general-font-family);
+}
+
+@media (min-width: 1200px) {
+  .navigation__mobile--menu {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navigation__mobile--menu {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .navigation__links--item {
+    font-size: 1.2rem;
+  }
+  .navigation__mobile--menu {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .navigation__mobile--menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15rem;
+  }
+
+  .navigation__logo {
+    width: 130px !important;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+  }
+
+  .navigation__links > ul {
+    display: none;
+  }
+
+  .navigation__container {
+    padding-left: 3rem;
+  }
+
+  .text-box > h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 5rem;
+  }
+  .text-box > p {
+    margin: 4rem 2rem;
+    margin-top: 2rem !important;
+    padding: 0 3rem;
+    line-height: 2;
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .navigation__mobile--menu {
+    padding-left: 15rem;
+  }
+}

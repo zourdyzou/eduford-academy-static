@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,700;1,200;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+      integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"
+      integrity="sha512-a6ctI6w1kg3J4dSjknHj3aWLEbjitAXAjLDRUxo2wyYmDFRcz2RJuQr5M3Kt8O/TtUSp8n2rAyaXYy1sjoKmrQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"
+      integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"
+      integrity="sha512-axJX7DJduStuBB8ePC8ryGzacZPr3rdLaIDZitiEgWWk2gsXxEFlm4UW0iNzj2h3wp5mOylgHAzBzM4nRSvTZA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"
+      integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+      integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.12.1/polyfill.min.js"
+      integrity="sha512-uzOpZ74myvXTYZ+mXUsPhDF+/iL/n32GDxdryI2SJronkEyKC8FBFRLiBQ7l7U/PTYebDbgTtbqTa6/vGtU23A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script defer src="./js/app.js"></script>
+
+    <title>Eduford Academy</title>
+  </head>
+  <body>
+    <section class="header">
+      <nav class="navigation__container">
+        <a href="index.html" class="navigation__link">
+          <img
+            src="./images/logo.png"
+            alt="eduford Academy logo"
+            class="navigation__logo"
+          />
+        </a>
+        <div class="navigation__links">
+          <ul>
+            <li class="navigation__list">
+              <a href="index.html" class="navigation__links--item">HOME</a>
+            </li>
+            <li class="navigation__list">
+              <a href="index.html" class="navigation__links--item">ABOUT</a>
+            </li>
+            <li class="navigation__list">
+              <a href="index.html" class="navigation__links--item">BLOG</a>
+            </li>
+
+            <li class="navigation__list">
+              <a href="index.html" class="navigation__links--item">COURSE</a>
+            </li>
+
+            <li class="navigation__list">
+              <a href="index.html" class="navigation__links--item">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+        <a href="#" class="navigation__mobile--menu">
+          <i class="bx bx-menu mobile__menu--button"></i>
+        </a>
+      </nav>
+
+      <!-- ONLY APPEAR ON MOBILE VIEWPORT -->
+      <div class="navigation__mobile hidden">
+        <a href="#" class="close__button">
+          <i class="fa fa-times" id="close-btn"></i>
+        </a>
+        <ul>
+          <li class="navigation__list--mobile">
+            <a href="index.html" class="navigation__links--mobile">HOME</a>
+          </li>
+          <li class="navigation__list--mobile">
+            <a href="index.html" class="navigation__links--mobile">ABOUT</a>
+          </li>
+          <li class="navigation__list--mobile">
+            <a href="index.html" class="navigation__links--mobile">BLOG</a>
+          </li>
+
+          <li class="navigation__list--mobile">
+            <a href="index.html" class="navigation__links--mobile">COURSE</a>
+          </li>
+
+          <li class="navigation__list--mobile">
+            <a href="index.html" class="navigation__links--mobile">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="text-box">
+        <h1>World's Biggest University</h1>
+        <p>
+          Everything in the world is pointless and emptiness without education,
+          so set upyour plan to gain your higher education in Eduford Academy 📚
+        </p>
+        <a href="#" class="button__hero">Visit us to view more.</a>
+      </div>
+    </section>
+
+    <!-- COURSE -->
+    <section class="course"></section>
+  </body>
+</html>
